@@ -1,5 +1,9 @@
 from django.contrib import admin
-from . import views
+from django.conf.urls import url,include
+from music import views
 urlpatterns = [
-        path('$',views.index, name=''),
+        url(r'^admin/',admin.site.urls),
+        url(r'^$,views.index,name='index'),
+        url(r'music/',include('music.urls')),
+
 ]

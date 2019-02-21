@@ -1,6 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+
+
 
 def index(request):
-    return HttpResponse("<h1> this is my first web page<\h1>")
-
-
+    dict={'insert':"HEllO"}
+    return render(request,'music/index.html',context="dict")
