@@ -1,5 +1,6 @@
-from django.conf.urls import urls
+from django.urls import path
 from music import views
-utlpatters=[
-url(r'^$',views.index,name='index')
+urlpatterns=[
+ path('',views.index,name='index'),
+
 ]
